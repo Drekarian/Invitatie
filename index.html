@@ -1,82 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Baptism Invitation</title>
+    <title>Invitație Botez</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Playfair+Display:wght@500&display=swap');
+        
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Playfair Display', serif;
             text-align: center;
             margin: 0;
             padding: 20px;
-            background-image: url('background.jpg');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
+            background: linear-gradient(to bottom, #ffe0f0, #f8bbd0);
+            animation: fadeIn 1.5s ease-in-out;
         }
-
-        .h1 {
-            color: #4a86e0;
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .invitation {
+            background-color: rgba(255, 240, 245, 0.95);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            max-width: 650px;
+            margin: 20px auto;
+            transition: transform 0.3s;
+        }
+        
+        .invitation:hover {
+            transform: scale(1.03);
+        }
+        
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            color: #c2185b;
+            font-size: 40px;
             margin-bottom: 20px;
         }
-
-        .p {
-            font-size: 18px;
-            line-height: 1.6;
-            color: #333;
+        
+        p {
+            font-size: 20px;
+            line-height: 1.8;
+            color: #6a1b9a;
         }
-
-        .details {
-            background-color: rgba(173, 216, 230, 0.85); /* Light blue background */
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
-            margin: 20px auto;
-        }
-
+        
         .date {
             font-weight: bold;
-            color: #e91e63;
+            color: #d81b60;
         }
-
+        
         .location {
             font-style: italic;
+            color: #880e4f;
         }
-
+        
         .rsvp {
             margin-top: 30px;
             font-weight: bold;
+            color: #ad1457;
         }
-
-        .img {
+        
+        .button {
+            display: inline-block;
+            background-color: #d81b60;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 10px;
+            transition: background 0.3s ease-in-out;
+        }
+        
+        .button:hover {
+            background-color: #ad1457;
+        }
+        
+        img {
             max-width: 100%;
             height: auto;
-            border-radius: 10px;
+            border-radius: 15px;
             margin-bottom: 20px;
-            display: block;
-            margin: 20px auto;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
 <body>
 
-    <h1>Vă invit cu drag la botezul micuței Olivia!</h1>
-
-    <div class="details">
-        <img src="baby-photo.jpg" alt="Baby's Photo" class="img">
-        <p>With joy and gratitude, we invite you to celebrate the baptism of our beloved child,</p>
-        <p><strong>[Baby's Full Name]</strong></p>
-
-        <p><date>Date: [Date of Baptism]</date></p>
-        <p><time>Time: [Time of Baptism]</time></p>
-        <p><location>Location: [Church Name], [Church Address]</location></p>
-
-        <p>A reception will follow at [Reception Location, if applicable].</p>
-
-        <p class="rsvp">Please RSVP by [RSVP Date] to [Contact Name] at [Phone Number] or [Email Address].</p>
+    <div class="invitation">
+        <h1>Vă invit cu drag la botezul micuței Olivia!</h1>
+        <img src="baby-photo.jpg" alt="Bebeluș Olivia">
+        <p>Cu bucurie și recunoștință, vă invităm să fiți alături de noi la botezul fiicei noastre dragi.</p>
+        
+        <p class="date">📅 Data: 26 Aprilie 2025</p>
+        <p>🕒 Ora: 15:30</p>
+        <p class="location">⛪ Biserica „Sfânta Cuvioasa Teodora de la Sihla" <a class="button" href="https://maps.app.goo.gl/jJrrYPZCEcF4fpYHA" target="_blank">Vezi locația</a></p>
+        
+        <p>După ceremonie, vă așteptăm cu drag la petrecerea de botez la:</p>
+        <p class="location">🍽️ Restaurantul Armony <a class="button" href="https://maps.app.goo.gl/BPATcJM5rAmDcpG66" target="_blank">Vezi locația</a></p>
+        
+        <p class="rsvp">📞 Vă rugăm să confirmați prezența la Ștefana & Răzvan până pe 15 Aprilie 2025.</p>
     </div>
-
+    
 </body>
 </html>
